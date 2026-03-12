@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solvepath"
+version = "0.1.0"
+description = "A step-by-step mathematics solver library with detailed explanations"
+authors = [
+    { name = "Varshan" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+
+dependencies = []
+
+keywords = [
+    "math", "solver", "education", "step-by-step",
+    "mathematics", "algebra", "calculus"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.urls]
+Homepage = "https://github.com/VarshanNB/solvepath"
+Documentation = "https://github.com/VarshanNB/solvepath"
+Source = "https://github.com/VarshanNB/solvepath"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0"
+]
+
+[tool.setuptools]
+packages = ["solvepath"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=solvepath --cov-report=term-missing --cov-report=html"
